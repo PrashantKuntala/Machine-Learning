@@ -1,0 +1,15 @@
+
+Author :prashant kuntala
+problem : digit recognition
+
+MAIN SCRIPT : prashmethod.m
+
+	 A single script is used to run all the experiments , just need to comment out sections in the prashmethod.m to run individual experiments.
+
+
+ALL dependent scripts are in the submission folder.
+
+Submission folder contains all the files regarding perceptron algorithms.
+svm folder has all the files related to svm-light
+
+
