@@ -13,8 +13,9 @@ An experimental evaluation of the linear regression model, with and without regu
 - Plottest.m : plots the data in test.dat
 - Plotvalid.m : plots the data in valid.dat
 
-- prash5d1.m		-- solves the linear regression without regularization using E(w) for model M = [0,9] 
-			   and plots the erms for train and test against Model.
+- linearReg.m
+> solves the linear regression without regularization, plots the erms for train and test against Model. Used to select the linear regression model [0-9].
+
 - prash5d2.m		-- solves the linear regression without regularization and adding the validation set to train,
 		 	   using E(w) for model M = [0,9] and plots erms for train+validation and test against Model.
 - prash5d3.m		-- solves the linear Regression with regularization fixing M = 9 for lg lamda = [-50,0] and plots the values.

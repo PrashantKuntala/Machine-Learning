@@ -4,7 +4,7 @@
 % plotting the graph for M = [0,9] vs Train_erms and Test_erms
 
 %loading your train data and storing in vectors.
-data=load('train.dat');
+data=load('./data/train.dat');
 X = data(:,1);
 T = data(:,2);
 
@@ -13,7 +13,7 @@ erms = zeros(1,10);
 terms = zeros(1,10);
 
 %loading your test data and storing in Vectors.
-tdata = load('test.dat');
+tdata = load('./data/test.dat');
 X2=tdata(:,1);
 T2=tdata(:,2);
 

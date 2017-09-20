@@ -1,7 +1,7 @@
 % this script does the following plots your train.dat
 
 %loading your train data and storing in vectors.
-data=load('train.dat');
+data=load('./data/train.dat');
 X = data(:,1);
 T = data(:,2);
 
