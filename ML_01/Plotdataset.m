@@ -4,7 +4,7 @@
 
 
 %loading your train data and storing in vectors.
-data=load('dataset.dat');
+data=load('./data/dataset.dat');
 X = data(:,1);
 T = data(:,2);
 

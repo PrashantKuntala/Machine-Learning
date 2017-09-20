@@ -8,10 +8,10 @@ An experimental evaluation of the linear regression model, with and without regu
 
 ## Scripts and their function
 
-- prashPlotdataset.m 	-- plots the data in dataset.dat
-- prashPlottrain.m	-- plots the data in train.dat
-- prashPlottest.m		-- plots the data in test.dat
-- prashPlotvalid.m	-- plots the data in valid.dat
+- Plotdataset.m  : plots the data in dataset.dat
+- Plottrain.m : plots the data in train.dat
+- Plottest.m : plots the data in test.dat
+- Plotvalid.m : plots the data in valid.dat
 
 - prash5d1.m		-- solves the linear regression without regularization using E(w) for model M = [0,9] 
 			   and plots the erms for train and test against Model.
