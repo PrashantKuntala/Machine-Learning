@@ -8,10 +8,13 @@ An experimental evaluation of the linear regression model, with and without regu
 
 **Plotdataset.m**
 > plots the data in dataset.dat
+
 **Plottrain.m** 
 > plots the data in train.dat
+
 **Plottest.m**
 > plots the data in test.dat
+
 **Plotvalid.m**
 > plots the data in valid.dat
 
