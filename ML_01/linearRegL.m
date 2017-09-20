@@ -3,7 +3,7 @@
 % comparing the erms for Train and valid for lg lamda = [-50,0] in steps of five and plotting erms of train vs erms of valid.
 
 %loading your train data and storing in vectors.
-data=load('train.dat');
+data=load('./data/train.dat');
 X = data(:,1);
 T = data(:,2);
 
@@ -13,7 +13,7 @@ erms = zeros(1,10);
 terms = zeros(1,10);
 
 %loading your test data and storing in Vectors.
-tdata = load('valid.dat');
+tdata = load('./data/valid.dat');
 X2=tdata(:,1);
 T2=tdata(:,2);
 

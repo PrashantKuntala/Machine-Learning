@@ -4,7 +4,7 @@
 % Plotting the train erms and test erms for M = [0,9]
 
 %loading your train data and storing in vectors.
-data=load('train.dat');
+data=load('./data/train.dat');
 X = data(:,1);
 T = data(:,2);
 
@@ -13,13 +13,13 @@ erms = zeros(1,10);
 terms = zeros(1,10);
 
 % Loading validation data into the Vectors and appending to the original vector.
-vdata =load('valid.dat');
+vdata =load('./data/valid.dat');
 X = [X;vdata(:,1)];
 T = [T;vdata(:,2)];
 X
 
 %loading your test data and storing in Vectors.
-tdata = load('test.dat');
+tdata = load('./data/test.dat');
 X2=tdata(:,1);
 T2=tdata(:,2);
 

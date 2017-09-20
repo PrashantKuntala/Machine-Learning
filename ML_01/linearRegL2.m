@@ -1,28 +1,23 @@
 %
 % Linear Regression model selection with regularization and  validation set
-% comparing the erms for Train and valid for lg lamda = [-50,0] and plotting erms of train vs erms of valid.
+% comparing the erms for Train and valid for lg lamda = -20 and plotting erms of train vs erms of valid.
 
 %loading your train data and storing in vectors.
-data=load('train.dat');
+data=load('./data/train.dat');
 X = data(:,1);
 T = data(:,2);
 
-% Loading validation data into the Vectors and appending to the original vector.
-vdata =load('valid.dat');
-X = [vdata(:,1);X];
-T = [vdata(:,2);T];
 
 % these vectors are used to store the erms in training and testing , later to plot the erms vs M graph.
 erms = zeros(1,10);
 terms = zeros(1,10);
 
 %loading your test data and storing in Vectors.
-tdata = load('test.dat');
+tdata = load('./data/test.dat');
 X2=tdata(:,1);
 T2=tdata(:,2);
 
 i =1;
-
 %Model M = 0
 lam = -20;
 In = eye(1);
@@ -34,12 +29,11 @@ W
 %P
 C = [X2.^0];
 %w2 = pinv(In+(C'*C)*C'*T2;
-s1 = (sum(((P*W).-T).^2))/(2*20);
+s1 = (sum(((P*W).-T).^2))/(2*10);
 s2 = (sum(((C*W).-T2).^2))/(2*10);
-erms(1,i) = sqrt((2*s1)/20);
+erms(1,i) = sqrt((2*s1)/10);
 terms(1,i) = sqrt((2*s2)/10);
 i = i+1;
-
 
 %Model M = 1
 lam = -20;
@@ -52,12 +46,11 @@ W
 %P
 C = [X2.^0,X2.^1];
 %w2 = pinv(In+(C'*C)*C'*T2;
-s1 = (sum(((P*W).-T).^2))/(2*20);
+s1 = (sum(((P*W).-T).^2))/(2*10);
 s2 = (sum(((C*W).-T2).^2))/(2*10);
-erms(1,i) = sqrt((2*s1)/20);
+erms(1,i) = sqrt((2*s1)/10);
 terms(1,i) = sqrt((2*s2)/10);
 i = i+1;
-
 
 %Model M = 2
 lam = -20;
@@ -70,9 +63,9 @@ W
 %P
 C = [X2.^0,X2.^1,X2.^2];
 %w2 = pinv(In+(C'*C)*C'*T2;
-s1 = (sum(((P*W).-T).^2))/(2*20);
+s1 = (sum(((P*W).-T).^2))/(2*10);
 s2 = (sum(((C*W).-T2).^2))/(2*10);
-erms(1,i) = sqrt((2*s1)/20);
+erms(1,i) = sqrt((2*s1)/10);
 terms(1,i) = sqrt((2*s2)/10);
 i = i+1;
 
@@ -87,11 +80,12 @@ W
 %P
 C = [X2.^0,X2.^1,X2.^2,X2.^3];
 %w2 = pinv(In+(C'*C)*C'*T2;
-s1 = (sum(((P*W).-T).^2))/(2*20);
+s1 = (sum(((P*W).-T).^2))/(2*10);
 s2 = (sum(((C*W).-T2).^2))/(2*10);
-erms(1,i) = sqrt((2*s1)/20);
+erms(1,i) = sqrt((2*s1)/10);
 terms(1,i) = sqrt((2*s2)/10);
 i = i+1;
+
 
 
 %Model M = 4
@@ -105,12 +99,11 @@ W
 %P
 C = [X2.^0,X2.^1,X2.^2,X2.^3,X2.^4];
 %w2 = pinv(In+(C'*C)*C'*T2;
-s1 = (sum(((P*W).-T).^2))/(2*20);
+s1 = (sum(((P*W).-T).^2))/(2*10);
 s2 = (sum(((C*W).-T2).^2))/(2*10);
-erms(1,i) = sqrt((2*s1)/20);
+erms(1,i) = sqrt((2*s1)/10);
 terms(1,i) = sqrt((2*s2)/10);
 i = i+1;
-
 
 %Model M = 5
 lam = -20;
@@ -123,12 +116,11 @@ W
 %P
 C = [X2.^0,X2.^1,X2.^2,X2.^3,X2.^4,X2.^5];
 %w2 = pinv(In+(C'*C)*C'*T2;
-s1 = (sum(((P*W).-T).^2))/(2*20);
+s1 = (sum(((P*W).-T).^2))/(2*10);
 s2 = (sum(((C*W).-T2).^2))/(2*10);
-erms(1,i) = sqrt((2*s1)/20);
+erms(1,i) = sqrt((2*s1)/10);
 terms(1,i) = sqrt((2*s2)/10);
 i = i+1;
-
 
 %Model M = 6
 lam = -20;
@@ -141,12 +133,11 @@ W
 %P
 C = [X2.^0,X2.^1,X2.^2,X2.^3,X2.^4,X2.^5,X2.^6];
 %w2 = pinv(In+(C'*C)*C'*T2;
-s1 = (sum(((P*W).-T).^2))/(2*20);
+s1 = (sum(((P*W).-T).^2))/(2*10);
 s2 = (sum(((C*W).-T2).^2))/(2*10);
-erms(1,i) = sqrt((2*s1)/20);
+erms(1,i) = sqrt((2*s1)/10);
 terms(1,i) = sqrt((2*s2)/10);
 i = i+1;
-
 
 %Model M = 7
 lam = -20;
@@ -159,9 +150,9 @@ W
 %P
 C = [X2.^0,X2.^1,X2.^2,X2.^3,X2.^4,X2.^5,X2.^6,X2.^7];
 %w2 = pinv(In+(C'*C)*C'*T2;
-s1 = (sum(((P*W).-T).^2))/(2*20);
+s1 = (sum(((P*W).-T).^2))/(2*10);
 s2 = (sum(((C*W).-T2).^2))/(2*10);
-erms(1,i) = sqrt((2*s1)/20);
+erms(1,i) = sqrt((2*s1)/10);
 terms(1,i) = sqrt((2*s2)/10);
 i = i+1;
 
@@ -176,9 +167,9 @@ W
 %P
 C = [X2.^0,X2.^1,X2.^2,X2.^3,X2.^4,X2.^5,X2.^6,X2.^7,X2.^8];
 %w2 = pinv(In+(C'*C)*C'*T2;
-s1 = (sum(((P*W).-T).^2))/(2*20);
+s1 = (sum(((P*W).-T).^2))/(2*10);
 s2 = (sum(((C*W).-T2).^2))/(2*10);
-erms(1,i) = sqrt((2*s1)/20);
+erms(1,i) = sqrt((2*s1)/10);
 terms(1,i) = sqrt((2*s2)/10);
 i = i+1;
 
@@ -193,20 +184,22 @@ W
 %P
 C = [X2.^0,X2.^1,X2.^2,X2.^3,X2.^4,X2.^5,X2.^6,X2.^7,X2.^8,X2.^9];
 %w2 = pinv(In+(C'*C)*C'*T2;
-s1 = (sum(((P*W).-T).^2))/(2*20);
+s1 = (sum(((P*W).-T).^2))/(2*10);
 s2 = (sum(((C*W).-T2).^2))/(2*10);
-erms(1,i) = sqrt((2*s1)/20);
+erms(1,i) = sqrt((2*s1)/10);
 terms(1,i) = sqrt((2*s2)/10);
-
 i = i+1;
+
 erms(1,10)
 terms(1,10)
 
 
+
+%plotting the erms and validation erms against the loglamda.
 scale = 0:9;
 plot(scale,erms,"-o","linewidth", 2,scale,terms,"-o","linewidth", 2);
-title ('plot d3b : Linear Regression with Regularization for loglamda = -20 and M = [0,9]');
-h = legend ({'Train+Validation'}, 'Test');
+title ('plot d3a : Linear Regression with Regularization for loglamda = -20 and M = [0,9]');
+h = legend ({'Train'}, 'Test');
 legend (h, 'location', 'northeastoutside');
 set (h, 'fontsize', 10);
 xlabel(' Model M ');
