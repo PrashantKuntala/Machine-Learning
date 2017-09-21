@@ -9,17 +9,17 @@ for T = epoch # should be done for 1 to 20
 	#training for T = 1 on all digits 0 to 9 on the training set.
 
 	for digit = 0:9
-		fname = strcat("digit_train",num2str(digit),".dat"); # running perceptron on each digit
+		fname = strcat("../output/trainset_digit_files/digit_train",num2str(digit),".dat"); # running perceptron on each digit
 		Wd = [Wd perceptron(fname,T)]; # appending column vectors of Wd returned for each digit
-		# the vectors returned by perceptron are in the normalized form.	
+		# the vectors returned by perceptron are in the normalized form.
 	end
 		printf("finished T = %d , columns for Wd : %d \n",T,columns(Wd));
 
 	# Testing for T = 1 on all digits 0 to 9 on the Development set
 	size(Wd)
 	X = [ones(rows(testvector),1) testvector(:,[1:columns(testvector)-1])]; # creating the feature vector.
-	Tlabel = testvector(:,columns(testvector));	
-	
+	Tlabel = testvector(:,columns(testvector));
+
 	size(X)
 	# calculating F(xd) for all the examples
 	fxd = [];
@@ -29,10 +29,10 @@ for T = epoch # should be done for 1 to 20
 	end
 	size(fxd)
 	fxd = fxd';
-	Ylabel = zeros(rows(X),1);	
+	Ylabel = zeros(rows(X),1);
 	confusionMatrix=zeros(10,10);
 	# getting the highest value of F(xd) to assign the label for that example and also creating the confusion matrix
-	for i = 1:columns(fxd)	
+	for i = 1:columns(fxd)
 	[maxvalue , maxindex] = max(fxd(:,i));
 	Ylabel(i) = maxindex -1 ;
 	if( Ylabel(i) == Tlabel(i))
@@ -43,8 +43,8 @@ for T = epoch # should be done for 1 to 20
 	endif
 	end
 confusionMatrix
-sum(confusionMatrix(:))	
-        
+sum(confusionMatrix(:))
+
 
 end
 
@@ -55,4 +55,3 @@ Acount
 #index
 toc;
 end
-

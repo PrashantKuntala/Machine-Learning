@@ -1,10 +1,13 @@
+#Digit Recognition using Perceptron algorithm
 
-Author :prashant kuntala
-problem : digit recognition
+Dataset is retrieved from UCI Machine learning repository.
 
-MAIN SCRIPT : prashmethod.m
+Download and Check the dataset description for [Optical Recognition of Handwritten Digits Data Set](http://archive.ics.uci.edu/ml/datasets/optical+recognition+of+handwritten+digits).
 
-	 A single script is used to run all the experiments , just need to comment out sections in the prashmethod.m to run individual experiments.
+##Execution
+
+A single script is used to run any of the perceptron algorithms.
+Comment out sections in the *runPerceptron.m* to a particular perceptron algorithm.
 
 
 ALL dependent scripts are in the submission folder.
