@@ -1,12 +1,9 @@
-Author : Prashant kuntala
-date   : 29th October,2016
+# Experimental evaluation of linear svm and the nearest neighbour algorithm on the problem of categorizing text 
+documents in the presence of irrelevant features.
 
-Problem : Experimental evaluation of linear svm and the nearest neighbour algorithm on the problem of categorizing text documents in the presence of irrelevant features.
+**Dataset source :** [UCI Machine learning repository , Dexter Dataset](http://archive.ics.uci.edu/ml/datasets/Dexter)
 
-Dataset source : UCI Machine learning repository , Dexter Dataset 
-link : http://archive.ics.uci.edu/ml/datasets/Dexter
-
-Files : 
+**Files :** 
 
 	dexter.testdata
 	dexter.traindata
@@ -14,9 +11,9 @@ Files :
 	dexter.trainlabels
 	dexter.validlabels
 
-Programming languages: python (scikit learn for KNN), svm-light for linear svm, octave and shell script.
+**Programming languages:** python (scikit learn for KNN), svm-light for linear svm, octave and shell script.
 
-Scritps : 
+## Scritps : 
 	
 	generateFeature.py : converts the data files to feature file.
 	normalizeData.m : Normalize the data and then create files for each top N.The rank file is hardcoded.
